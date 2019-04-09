@@ -1,0 +1,28 @@
+<h1>UserList from The Database aka MongoDB</h1>
+
+<table>
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Age</th>
+<th>Country</th>
+<th>Created At</th>
+</tr>
+<tr>
+{{#each users}}
+    <tr>
+    <td><a href="/user/detail/{{_id}}">{{name}}</a></td>
+    <td>{{email}}</td>
+    <td>{{age}}</td>
+    <td>{{country}}</td>
+    <td>{{created_at}}</td>
+    <td>
+        <a href="/user/delete/{{_id}}"><i class="far fa-trash-alt"></i></a>
+    </td> 
+    <td>
+        <a href="/user/update/{{_id}}"><i class="far fa-edit"></i></a>
+    </td>
+
+    </tr>
+{{/each}}
+</table>
